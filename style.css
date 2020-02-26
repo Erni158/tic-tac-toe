@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #000;
+}
+
+.game-window {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70vh;
+    height: 70vh;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.start {
+    position: absolute;
+    width: 170px;
+    height: 50px;
+    background-color: #fff;
+    top: calc(50% - 25px);
+    left: calc(50% - 85px);
+    border: 2px solid black;
+    border-radius: 15px;
+    font-size: 2em;
+    cursor: pointer;
+    animation: heartBeat 1s infinite;
+    outline: 0;
+    z-index: 1;
+}
+
+.game {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 65vh;
+    height: 65vh;
+    margin-bottom: 30px;
+    background-color: #fff;
+} 
+
+.box{
+    display: none;
+    flex-basis: 30%;
+    width: 100px;  
+    height: 200px;
+    margin: 10px;
+    background-color: #000;
+    border-radius: 15px;
+    font-size: 9rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+    text-align: center;
+    line-height: 200px;
+    cursor: pointer;
+}
+
+/* table {
+    display: none;
+    position: absolute;
+    top: calc(50% - 65vh/2);
+    left: calc(50% - 65vh/2);
+    min-width: 65vh;
+    min-height: 65vh;
+}
+
+
+table td{
+    background-color: #000;
+    border-radius: 15px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 100px;
+    color: white;
+    cursor: pointer;
+} */
