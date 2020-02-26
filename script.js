@@ -13,7 +13,7 @@ const winningConditions = [
 let box = document.querySelectorAll('.box');
 let currentPlayer = "X";
 
-function handleClick(clickedBox){
+let handleClick = clickedBox => {
     const clickedCell = clickedBox.target;
     const clickedCellIndex = parseInt(clickedCell.getAttribute('data-index'));
 
@@ -21,12 +21,12 @@ function handleClick(clickedBox){
     checkResult();
 }
 
-function handleMove(clickedCell, clickedCellIndex){
+let handleMove = (clickedCell, clickedCellIndex) => {
     board[clickedCellIndex] = currentPlayer;
     clickedCell.innerHTML = currentPlayer;
 }
 
-function checkResult(){
+let checkResult = () => {
     let roundWon = false;
     for(let i = 0; i <= 7; i++){
         const winCondition = winningConditions[i];
@@ -47,7 +47,7 @@ function checkResult(){
     playerChange();
 }
 
-function playerChange(){
+let playerChange = () => {
     currentPlayer = currentPlayer === "X" ? "O" : "X";
 }
 
