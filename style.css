@@ -64,22 +64,27 @@ body{
     cursor: pointer;
 }
 
-/* table {
+#alert {
     display: none;
     position: absolute;
-    top: calc(50% - 65vh/2);
-    left: calc(50% - 65vh/2);
-    min-width: 65vh;
-    min-height: 65vh;
+    background-color: rgba(255, 111, 111, 0.8);
+    width: 75vh;
+    height: 75vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-
-table td{
-    background-color: #000;
-    border-radius: 15px;
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 100px;
-    color: white;
+#alert > button {
+    position: absolute;
+    background-color: #fff;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 35px;
+    border: 2px solid black;
+    font-size: 1.5em;
+    font-weight: bold;
     cursor: pointer;
-} */
+}
