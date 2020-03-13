@@ -1,4 +1,5 @@
-const btn = document.querySelector('button');
+const btn_start = document.getElementById('btn');
+const btn_reset = document.getElementById('reset');
 let board = ["", "", "", "", "", "", "", "", ""];
 const winningConditions = [
     [0, 1, 2],
@@ -42,7 +43,7 @@ let checkResult = () => {
         }
     }
     if(roundWon){
-
+        document.getElementById('alert').style.display = "block";
     }
     playerChange();
 }
@@ -51,8 +52,12 @@ let playerChange = () => {
     currentPlayer = currentPlayer === "X" ? "O" : "X";
 }
 
-btn.addEventListener('click', () => {
-    btn.style.animation = "zoomOutLeft 1s forwards";
+btn_reset.addEventListener('click', () => {
+
+});
+
+btn_start.addEventListener('click', () => {
+    btn_start.style.animation = "zoomOutLeft 1s forwards";
     setTimeout(() => {
         for(let i = 0; i < 9; i++){
             box[i].style.display = "block";
